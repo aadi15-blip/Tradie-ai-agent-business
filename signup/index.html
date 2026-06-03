@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalFlow — Get Started Free</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#0f172a;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:40px 20px}
+h1{font-size:36px;font-weight:800;text-align:center;margin-bottom:8px}
+h1 span{background:linear-gradient(135deg,#f59e0b,#eab308);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{text-align:center;color:#94a3b8;margin-bottom:40px;font-size:16px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-bottom:40px}
+.plan-card{background:#1e293b;border:2px solid #334155;border-radius:16px;padding:24px;cursor:pointer;transition:.2s;position:relative}
+.plan-card:hover{border-color:#475569}
+.plan-card.selected{border-color:#f59e0b;box-shadow:0 0 20px rgba(245,158,11,0.15)}
+.plan-card .badge{position:absolute;top:-10px;right:16px;background:#f59e0b;color:#0f172a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:8px}
+.plan-card h3{font-size:18px;font-weight:700;margin-bottom:4px}
+.plan-card .price-setup{font-size:13px;color:#94a3b8}
+.plan-card .price-setup strong{color:#f59e0b;font-size:26px}
+.plan-card .price-monthly{font-size:13px;color:#94a3b8;margin-bottom:12px}
+.plan-card .price-monthly strong{color:#fff;font-size:16px}
+.plan-card .features{list-style:none;font-size:13px;color:#cbd5e1}
+.plan-card .features li{padding:3px 0}
+.plan-card .features li:before{content:"✓ ";color:#22c55e;font-weight:700}
+.plan-card .trial-badge{margin-top:12px;font-size:12px;background:#166534;color:#bbf7d0;padding:4px 10px;border-radius:8px;display:inline-block}
+.form-section{background:#1e293b;border-radius:16px;padding:32px;border:1px solid #334155}
+.form-section h2{font-size:20px;font-weight:700;margin-bottom:20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-grid .full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:600;color:#94a3b8;margin-bottom:4px}
+input,select{width:100%;padding:10px 14px;background:#0f172a;border:1px solid #334155;border-radius:10px;color:#fff;font-size:14px;outline:none}
+input:focus,select:focus{border-color:#f59e0b}
+.btn{width:100%;padding:14px;background:linear-gradient(135deg,#f59e0b,#eab308);color:#0f172a;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-top:20px;transition:.2s}
+.btn:hover{opacity:.9}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.toast{display:none;margin-top:16px;padding:14px;border-radius:10px;text-align:center;font-weight:600;font-size:14px}
+.toast.success{display:block;background:#166534;color:#bbf7d0}
+.toast.error{display:block;background:#7f1d1d;color:#fecaca}
+@media(max-width:768px){.form-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🌊 <span>LocalFlow</span></h1>
+<p class="subtitle">Website + AI Agent for your trade business. Start your 14-day free trial.</p>
+<div class="plans" id="plans"></div>
+<div class="form-section">
+<h2>Your Business Details</h2>
+<div class="form-grid">
+<div class="full"><label>Business Name</label><input id="bizName" placeholder="e.g. Mick's Roofing"></div>
+<div><label>Business Type</label>
+<select id="bizType">
+<option>Roofing</option><option>Plumbing</option><option>Electrical</option><option>HVAC</option><option>Landscaping</option><option>Painting</option><option>Building</option><option>Guttering</option><option>Other</option>
+</select></div>
+<div><label>Your Name</label><input id="yourName" placeholder="Your full name"></div>
+<div><label>Phone</label><input id="phone" placeholder="0400 123 456"></div>
+<div><label>Email</label><input id="email" type="email" placeholder="you@example.com"></div>
+<div class="full"><label>Services (comma separated with prices)</label><input id="services" placeholder="Roof Repair:550,Roof Replacement:8500,Gutter Clean:220"></div>
+<div class="full"><label>Service Areas (comma separated)</label><input id="areas" placeholder="Parramatta,Hornsby,Castle Hill,Epping"></div>
+</div>
+<button class="btn" onclick="submitSignup()">Start Free Trial →</button>
+<div id="toast" class="toast"></div>
+</div>
+</div>
+<script>
+const PLANS = [
+{id:'widget',name:'Widget Only',setup:149,monthly:39,features:['AI chat widget','Works on existing site','Lead capture','Quick setup'],badge:''},
+{id:'starter',name:'Starter',setup:299,monthly:69,features:['5-page website','AI chat agent built-in','Mobile responsive','Lead capture'],badge:'Most Popular'},
+{id:'pro',name:'Pro',setup:599,monthly:129,features:['10-page website','AI agent + SMS','Dashboard access','Content engine','Google optimisation'],badge:'Best Value'},
+{id:'multi',name:'Multi-Location',setup:1299,monthly:229,features:['Up to 3 location sites','AI agents per location','Everything in Pro','Priority support'],badge:''},
+];
+let selectedPlan = 'starter';
+function renderPlans(){const el=document.getElementById('plans');
+el.innerHTML=PLANS.map(p=>'<div class="plan-card '+(selectedPlan===p.id?'selected':'')+'" onclick="selectPlan(\''+p.id+'\')">'+(p.badge?'<div class="badge">'+p.badge+'</div>':'')+'<h3>'+p.name+'</h3><div class="price-setup"><strong>$'+p.setup+'</strong> setup</div><div class="price-monthly">then <strong>$'+p.monthly+'</strong>/month</div><ul class="features">'+p.features.map(f=>'<li>'+f+'</li>').join('')+'</ul><div class="trial-badge">✨ 14-day free trial</div></div>').join('');}
+renderPlans();
+function selectPlan(id){selectedPlan=id;renderPlans();}
+async function submitSignup(){
+const btn=document.querySelector('.btn');btn.disabled=true;btn.textContent='Starting your trial...';
+const data={business_name:document.getElementById('bizName').value,business_type:document.getElementById('bizType').value,phone:document.getElementById('phone').value,email:document.getElementById('email').value,plan_id:selectedPlan,owner_name:document.getElementById('yourName').value,services:document.getElementById('services').value,areas:document.getElementById('areas').value};
+try{
+const res=await fetch('http://localhost:8200/api/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+const r=await res.json();
+if(res.ok){
+document.getElementById('toast').className='toast success';
+document.getElementById('toast').textContent='✅ Trial started! Your website is being generated. Check your email for details.';
+}else throw new Error(r.detail||'Error');
+}catch(e){document.getElementById('toast').className='toast error';document.getElementById('toast').textContent=e.message;}
+btn.disabled=false;btn.textContent='Start Free Trial →';
+}
+</script>
+</body>
+</html>/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'

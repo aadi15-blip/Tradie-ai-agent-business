@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalFlow — AI That Runs Your Tradie Business</title>
+  <meta name="description" content="Never miss a job again. LocalFlow answers every call, sends instant SMS, books jobs automatically, and grows your tradie business. Built for Aussie plumbers, sparkies, chippies and roofers.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ════════════════ NAV ════════════════ -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">🌊 <span>LocalFlow</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Tradies</a>
+        <a href="#cta" class="nav-cta">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════════════════ HERO ════════════════ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="hero-badge">🇦🇺 Fair Dinkum Aussie Tech</span>
+        <h1>Never Miss a <span class="hl-yellow">Job</span> Again.</h1>
+        <p class="hero-sub">AI that captures leads, books jobs, and grows your tradie business — while you're on the tools. No missed calls. No lost quotes. No worries.</p>
+        <div class="hero-ctas">
+          <a href="#cta" class="btn btn-primary btn-lg">Start Free Trial</a>
+          <a href="#how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-avatars">👷‍♂️🔧⚡🔩🧰</div>
+          <span>Trusted by <strong>200+ tradies</strong> across Australia</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <!-- Phone call notification -->
+        <div class="hero-notification">
+          <div class="notif-icon">📞</div>
+          <div class="notif-body">
+            <div class="notif-title">Missed call from <strong>0401 234 567</strong></div>
+            <div class="notif-desc">LocalFlow sent instant SMS → booked job for tomorrow</div>
+          </div>
+        </div>
+        <!-- Dashboard preview -->
+        <div class="hero-dashboard">
+          <div class="dash-header">
+            <span class="dash-dot red"></span>
+            <span class="dash-dot yellow"></span>
+            <span class="dash-dot green"></span>
+            <span class="dash-title">📊 Today's Summary</span>
+          </div>
+          <div class="dash-stats">
+            <div class="dash-stat">
+              <span class="dash-num">7</span>
+              <span class="dash-lbl">New Leads</span>
+            </div>
+            <div class="dash-stat">
+              <span class="dash-num">4</span>
+              <span class="dash-lbl">Booked Jobs</span>
+            </div>
+            <div class="dash-stat">
+              <span class="dash-num">12s</span>
+              <span class="dash-lbl">Avg Response</span>
+            </div>
+            <div class="dash-stat">
+              <span class="dash-num">$12.4K</span>
+              <span class="dash-lbl">Pipeline Value</span>
+            </div>
+          </div>
+        </div>
+        <!-- SMS preview -->
+        <div class="hero-sms">
+          <div class="sms-bubble incoming">G'day, my roof's leaking from the storm last night. Can you come out?</div>
+          <div class="sms-bubble outgoing">No worries! We can have someone there in 2 hours. Just confirming your address?</div>
+          <div class="sms-bubble incoming">42 Smith St, Parramatta NSW 2150</div>
+          <div class="sms-bubble outgoing">✅ Booked! Dave'll be there by 2:30pm. Track him live: localflow.app/track</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ LOGO BAR ════════════════ -->
+  <section class="logo-bar">
+    <div class="container">
+      <p>Servicing tradies across Australia</p>
+      <div class="logo-items">
+        <span>🏗️ Sydney</span><span>🏭 Melbourne</span><span>🏖️ Brisbane</span>
+        <span>⚓ Perth</span><span>🌊 Adelaide</span><span>⛰️ Newcastle</span>
+        <span>☀️ Gold Coast</span><span>🏔️ Geelong</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ PROBLEM ════════════════ -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="section-label">The Problem</div>
+      <h2>Missed Calls Cost Tradies <span class="hl-yellow">Thousands</span>.</h2>
+      <p class="section-sub">You're on the tools, can't answer your phone, and every missed ring is a job going to your competitor. It's a fair dinkum nightmare.</p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📞❌</div>
+          <h4>Missed Calls = Lost Jobs</h4>
+          <p>68% of tradies miss after-hours calls. That's $500–$5,000 per call walking to your competitor.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h4>Slow Replies = No Trust</h4>
+          <p>If you don't reply within 5 minutes, 8 out of 10 customers call the next tradie on Google.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">📝</div>
+          <h4>Admin Eats Your Weekend</h4>
+          <p>Quoting, scheduling, follow-ups, chasing payments — tradies spend 15+ hours a week on paperwork.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">📱</div>
+          <h4>Social Media? No Time Mate.</h4>
+          <p>You know you need to post to get leads. But who's got time to film, edit, and write captions after a 10-hour day on site?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ STATS BAR ════════════════ -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">94%</span>
+        <span class="stat-label">Lead Capture Rate</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">12s</span>
+        <span class="stat-label">Average Response</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3.2×</span>
+        <span class="stat-label">More Jobs Booked</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">18h</span>
+        <span class="stat-label">Saved Per Week</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ HOW IT WORKS ════════════════ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2>Three Steps to <span class="hl-yellow">More Jobs, Less Stress</span></h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-icon">📞→💬</div>
+          <h4>Missed Call? Auto SMS.</h4>
+          <p>Customer calls while you're on site. LocalFlow instantly texts back: "G'day! We're on the tools but we've got you. What do you need?"</p>
+        </div>
+        <div class="step-arrow">⤵</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-icon">🤖✔️</div>
+          <h4>AI Qualifies & Books</h4>
+          <p>The AI asks the right questions, checks your availability, and books the job into your calendar — all through SMS. You just get the confirmation.</p>
+        </div>
+        <div class="step-arrow">⤵</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-icon">💰✅</div>
+          <h4>Show Up & Get Paid</h4>
+          <p>Turn up at the right time, at the right address, with the right gear. Customer's happy, job's done, payment's collected. Rinse and repeat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FEATURES ════════════════ -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-label">Features</div>
+      <h2>Everything a Tradie Needs to <span class="hl-yellow">Run a Profitable Business</span></h2>
+      <p class="section-sub">One dashboard. Zero missed opportunities. More time for the tools.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📞→💬</div>
+          <h4>Missed Call → SMS</h4>
+          <p>Every missed call gets an instant AI reply. Never lose a lead because you were on the tools.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h4>AI Lead Scoring</h4>
+          <p>Know which leads are hot, warm, or cold. The AI qualifies each one so you focus on the money jobs.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h4>Booking Automation</h4>
+          <p>Syncs with your calendar. Customers see real-time availability and book in one text. No back-and-forth.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h4>AI Content Engine</h4>
+          <p>Turns your job photos into Instagram posts, Facebook ads, and Google updates. Just tap publish.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h4>Pipeline Dashboard</h4>
+          <p>See every lead, quote, and job from first call to paid invoice. Know exactly where your business stands.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h4>Smart Follow-Ups</h4>
+          <p>Auto-reminds customers about appointments, follows up on quotes, and requests reviews after every job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ TESTIMONIALS ════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-label">Trusted by Tradies</div>
+      <h2>Fair Dinkum <span class="hl-yellow">Real Results</span></h2>
+      <p class="section-sub">Hear from tradies who've taken back their time and grown their business.</p>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"I was losing jobs every week cause I couldn't answer the phone on site. LocalFlow changed that. Booked an extra $4,200 in my first week. Absolute game changer."</p>
+          <div class="t-author">
+            <span class="t-avatar">👷</span>
+            <div>
+              <strong>Mick O'Brien</strong>
+              <span>Roofer, Parramatta NSW</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"I was spending Sunday nights trying to write social media posts. Now the AI does it for me. I just add photos and tap publish. Bloody brilliant."</p>
+          <div class="t-author">
+            <span class="t-avatar">⚡</span>
+            <div>
+              <strong>Jake Thompson</strong>
+              <span>Sparkie, Gold Coast QLD</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best $99 I spend each month. The auto-booking alone saves me 5 hours a week. My response time went from 45 minutes to 8 seconds. No worries at all."</p>
+          <div class="t-author">
+            <span class="t-avatar">🔩</span>
+            <div>
+              <strong>Dave Cattanach</strong>
+              <span>Chippie, Newcastle NSW</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"I was a bit sceptical at first — another tech thing to learn. But honestly? Set it up in 10 minutes and it just works. Customers love getting instant replies."</p>
+          <div class="t-author">
+            <span class="t-avatar">🔧</span>
+            <div>
+              <strong>Sarah Connors</strong>
+              <span>Plumber, Brunswick VIC</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The pipeline dashboard is unreal. I can see exactly where every job is at — from first call to paid. No more scraps of paper in the ute. Fair dinkum professional."</p>
+          <div class="t-author">
+            <span class="t-avatar">🏗️</span>
+            <div>
+              <strong>Carlos Garcia</strong>
+              <span>Builder, Adelaide SA</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Summer's our busiest season and I was drowning in missed calls. LocalFlow handled everything. I just showed up, did the job, and got paid. 10/10 would recommend."</p>
+          <div class="t-author">
+            <span class="t-avatar">🔩</span>
+            <div>
+              <strong>Pete Morrison</strong>
+              <span>HVAC Tech, Sunshine Coast QLD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ PRICING ════════════════ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-label">Pricing</div>
+      <h2>Simple Plans. <span class="hl-yellow">No Lock-In Contracts.</span></h2>
+      <p class="section-sub">All prices in Australian dollars. Start with a 14-day free trial. Cancel anytime — no questions asked.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price"><span class="price">$49</span> <span class="period">/month</span></div>
+          <p class="plan-desc">Perfect for solo tradies getting started</p>
+          <ul class="plan-features">
+            <li>✅ Lead capture & SMS follow-up</li>
+            <li>✅ Basic CRM — 1 user</li>
+            <li>✅ 200 SMS credits / month</li>
+            <li>✅ Calendar sync</li>
+            <li>✅ Mobile dashboard</li>
+          </ul>
+          <a href="#cta" class="btn btn-outline plan-btn">Start Free Trial</a>
+        </div>
+
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Tradies</div>
+          <div class="plan-name">Growth</div>
+          <div class="plan-price"><span class="price">$99</span> <span class="period">/month</span></div>
+          <p class="plan-desc">For growing teams with multiple tradies</p>
+          <ul class="plan-features">
+            <li>✅ Everything in Starter</li>
+            <li>✅ 3 user seats</li>
+            <li>✅ 1,000 SMS credits / month</li>
+            <li>✅ AI auto-booking</li>
+            <li>✅ Pipeline dashboard</li>
+            <li>✅ Smart reminders & follow-ups</li>
+          </ul>
+          <a href="#cta" class="btn btn-primary plan-btn">Start Free Trial</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="plan-name">Pro</div>
+          <div class="plan-price"><span class="price">$199</span> <span class="period">/month</span></div>
+          <p class="plan-desc">For established businesses going all-in</p>
+          <ul class="plan-features">
+            <li>✅ Everything in Growth</li>
+            <li>✅ 10 user seats</li>
+            <li>✅ 5,000 SMS credits / month</li>
+            <li>✅ AI Content Engine</li>
+            <li>✅ Multi-location support</li>
+            <li>✅ Review management</li>
+            <li>✅ Priority support</li>
+          </ul>
+          <a href="#cta" class="btn btn-outline plan-btn">Start Free Trial</a>
+        </div>
+      </div>
+
+      <p class="pricing-note">📞 Need a custom plan? Call us on <strong>1300 LOCALFLOW</strong> (1300 562 253) — we're happy to chat.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════ CTA ════════════════ -->
+  <section class="cta" id="cta">
+    <div class="container cta-inner">
+      <h2>Ready to Stop Chasing Leads and <span class="hl-yellow">Start Booking Jobs</span>?</h2>
+      <p class="cta-sub">Join 200+ Aussie tradies who've taken back their time. <strong>14-day free trial</strong> — no credit card needed.</p>
+
+      <form class="cta-form" onsubmit="event.preventDefault(); alert('Thanks mate! We\'ll be in touch within the hour to get you set up. 🇦🇺');">
+        <div class="cta-fields">
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Email address" required>
+        </div>
+        <div class="cta-fields">
+          <input type="tel" placeholder="Phone (e.g. 0400 123 456)" required>
+          <input type="text" placeholder="Your trade (e.g. Plumber, Sparkie)">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg cta-btn">🚀 Start Free Trial →</button>
+      </form>
+
+      <div class="cta-bottom">
+        <span>🛡️ No credit card needed</span>
+        <span>⏱️ 14-day free trial</span>
+        <span>🚫 Cancel anytime</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">🌊 <span>LocalFlow</span></a>
+        <p>AI-powered lead engine for Australian tradie businesses. Built in Naarm (Melbourne), Australia.</p>
+        <p class="footer-abn">ABN: 12 345 678 901</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#testimonials">Testimonials</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <a href="tel:1300562253">1300 LOCALFLOW</a>
+          <a href="mailto:hello@localflow.com.au">hello@localflow.com.au</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 LocalFlow Pty Ltd. Made on the unceded lands of the Wurundjeri people of the Kulin Nation. 🌏</p>
+    </div>
+  </footer>
+
+  <!-- ════════════════ JS ════════════════ -->
+  <script>
+    // Hamburger
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+      this.classList.toggle('open');
+    });
+    // Close nav on link
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('open');
+      });
+    });
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const h = this.getAttribute('href');
+        if (h === '#') return;
+        e.preventDefault();
+        const t = document.querySelector(h);
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    // Intersection Observer for fade-in
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.problem-card, .feature-card, .step, .testimonial-card, .pricing-card').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
