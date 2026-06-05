@@ -103,7 +103,7 @@ footer{background:#0f172a;color:#64748b;text-align:center;padding:24px;font-size
 <section id="reviews"><div class="container"><h2>What Our Customers Say</h2><div class="testimonials">'''+tc+'''</div></div></section>
 <section class="contact" id="contact"><div class="container"><h2>Get in Touch</h2><div class="contact-info"><p>📞 <strong>'''+phone+'''</strong></p><p>✉️ '''+email+'''</p><p>🕐 Mon–Fri 7am–5pm, Sat 8am–12pm</p><p style="margin-top:20px;font-size:14px;color:#64748b">Free quotes • Licensed & Insured • 15+ years</p><a href="tel:'''+phone_raw+'''" class="btn" style="display:inline-block;margin-top:20px">Call Now</a></div></div></section>
 <footer><p>© '''+str(datetime.now().year)+''' '''+name+'''. All rights reserved. ABN: 12 345 678 901</p></footer>
-<script src="http://localhost:8200/widget.js?business_id='''+bid+'''"></script>
+<script src="https://localflow-backend.up.railway.app/widget.js?business_id='''+bid+'''"></script>
 </body>
 </html>'''
 
@@ -133,4 +133,9 @@ if __name__ == "__main__":
     p.add_argument("--output", default="/home/team/shared/localflow/generated")
     p.add_argument("--serve", action="store_true")
     args = p.parse_args()
-    gen(args.name, args.type, args.phone, args.email, args.areas, args.services, args.output, args.serve)
+    gen(args.name, args.type, args.phone, args.email, args.areas, args.services, args.output, args.serve)/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'

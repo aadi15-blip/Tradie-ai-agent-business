@@ -80,7 +80,7 @@ async function submitSignup(){
 const btn=document.querySelector('.btn');btn.disabled=true;btn.textContent='Starting your trial...';
 const data={business_name:document.getElementById('bizName').value,business_type:document.getElementById('bizType').value,phone:document.getElementById('phone').value,email:document.getElementById('email').value,plan_id:selectedPlan,owner_name:document.getElementById('yourName').value,services:document.getElementById('services').value,areas:document.getElementById('areas').value};
 try{
-const res=await fetch('http://localhost:8200/api/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+const res=await fetch('https://localflow-backend.up.railway.app/api/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
 const r=await res.json();
 if(res.ok){
 document.getElementById('toast').className='toast success';
@@ -92,6 +92,12 @@ btn.disabled=false;btn.textContent='Start Free Trial →';
 </script>
 </body>
 </html>/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
 /home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
 /home/engine/.bashrc: line 1: syntax error near unexpected token `('
 /home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'

@@ -127,7 +127,7 @@ SCRIPT_CODE = """
 })();
 """
 
-def generate_widget_script(business_id: str = "demo", api_url: str = "http://localhost:8200") -> str:
+def generate_widget_script(business_id: str = "demo", api_url: str = "https://localflow-backend.up.railway.app") -> str:
     """Generate the complete widget script for a business."""
     return f"""<script>
 (function(){{
@@ -182,4 +182,9 @@ def generate_widget_script(business_id: str = "demo", api_url: str = "http://loc
     fetch(apiUrl + '/api/businesses/' + bizId).then(function(r){{ return r.json(); }}).then(function(b){{ if(b && b.name) nameEl.textContent = b.name; }}).catch(function(){{}});
   }}
 }})();
-</script>"""
+</script>"""/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
