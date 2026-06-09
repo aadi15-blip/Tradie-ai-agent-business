@@ -50,31 +50,36 @@ def signup(data: dict):
         "created_at": now(), "updated_at": now(),
     })
 
-    # Auto-generate site if it's a website plan (not widget-only)
+    # Auto-generate site + deploy to Netlify
     site_url = None
     if plan_id in ("starter", "pro", "multi"):
         try:
+            import subprocess, os
             gen_script = "/home/team/shared/localflow/generator/generate-site.py"
+            deploy_script = "/home/team/shared/localflow/generator/deploy.py"
             out_dir = "/home/team/shared/localflow/generated"
-            cmd = [
-                "python3", gen_script,
-                "--name", name,
-                "--type", biz_type,
-                "--phone", phone,
-                "--email", email,
-                "--services", services_str or "Roof Repair:550",
-                "--areas", areas_str or "Sydney Metro",
-                "--output", out_dir,
-            ]
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-            if result.returncode == 0:
-                bid = name.lower().replace("'", "").replace(" ", "-")[:20]
-                site_url = f"/generated/{bid}/"
-                print(f"Site generated for {name}: {result.stdout}")
-            else:
-                print(f"Site gen error: {result.stderr}")
+            cmd = ["python3", gen_script, "--name", name, "--type", biz_type,
+                   "--phone", phone, "--email", email,
+                   "--services", services_str or "Roof Repair:550",
+                   "--areas", areas_str or "Sydney Metro", "--output", out_dir]
+            subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+            bid = name.lower().replace("'", "").replace(" ", "-")[:20]
+            site_url = f"/generated/{bid}/"
+            # Try auto-deploy if Netlify token is set
+            if os.environ.get("NETLIFY_AUTH_TOKEN"):
+                try:
+                    result = subprocess.run(["python3", deploy_script, "--name", name,
+                        "--type", biz_type, "--phone", phone, "--email", email,
+                        "--services", services_str, "--areas", areas_str,
+                        "--site-name", bid], capture_output=True, text=True, timeout=60)
+                    if result.returncode == 0:
+                        for line in result.stdout.split("\n"):
+                            if "https://" in line and ".netlify.app" in line:
+                                site_url = line.strip()
+                except Exception as e:
+                    print(f"Auto-deploy error: {e}")
         except Exception as e:
-            print(f"Site gen exception: {e}")
+            print(f"Site gen error: {e}")
 
     return {
         "business_id": biz_id,
@@ -119,4 +124,9 @@ def update_business(business_id: str, data: dict):
     if updates:
         updates["updated_at"] = now()
         update("businesses", business_id, updates)
-    return get("businesses", business_id)
+    return get("businesses", business_id)/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+/home/engine/.bashrc: line 1: syntax error near unexpected token `('
+/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
