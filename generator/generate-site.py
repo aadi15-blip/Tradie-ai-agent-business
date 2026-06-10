@@ -133,9 +133,4 @@ if __name__ == "__main__":
     p.add_argument("--output", default="/home/team/shared/localflow/generated")
     p.add_argument("--serve", action="store_true")
     args = p.parse_args()
-    gen(args.name, args.type, args.phone, args.email, args.areas, args.services, args.output, args.serve)/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
-/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
-/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+    gen(args.name, args.type, args.phone, args.email, args.areas, args.services, args.output, args.serve)
