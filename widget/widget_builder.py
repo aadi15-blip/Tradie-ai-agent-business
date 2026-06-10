@@ -182,9 +182,4 @@ def generate_widget_script(business_id: str = "demo", api_url: str = "https://lo
     fetch(apiUrl + '/api/businesses/' + bizId).then(function(r){{ return r.json(); }}).then(function(b){{ if(b && b.name) nameEl.textContent = b.name; }}).catch(function(){{}});
   }}
 }})();
-</script>"""/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
-/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
-/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+</script>"""
