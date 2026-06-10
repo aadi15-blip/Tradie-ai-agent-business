@@ -41,9 +41,4 @@ def widget_js(business_id: str = "demo", api_url: str = "https://localflow-backe
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8200, reload=True)/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
-/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
-/home/engine/.bashrc: line 1: syntax error near unexpected token `('
-/home/engine/.bashrc: line 1: `. /etc/profile.d/workload-containment.shn# ~/.bashrc: executed by bash(1) for non-login shells.'
+    uvicorn.run("main:app", host="0.0.0.0", port=8200, reload=True)
